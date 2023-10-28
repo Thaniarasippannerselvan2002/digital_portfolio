@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Your Name</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here.</p>
+    </section>
+
+    <section id="portfolio" class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-item">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+        </div>
+        <!-- Add more portfolio items as needed -->
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <p>You can reach me at your@email.com</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name</p>
+        </div>
+    </footer>
+</body>
+</html>
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+    // Add smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: "smooth",
+            });
+        });
+    });
+});
+
